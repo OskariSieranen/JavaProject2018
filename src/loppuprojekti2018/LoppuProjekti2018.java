@@ -1,7 +1,11 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
+<<<<<<< HEAD
  * and open the template in the editor. jkqegweh
+=======
+ * and open the template in the editor.
+>>>>>>> master
 * hei hei ja moi moi
  */ 
 package loppuprojekti2018;
@@ -16,6 +20,7 @@ public class LoppuProjekti2018 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        double säde;
     }
     
 }
