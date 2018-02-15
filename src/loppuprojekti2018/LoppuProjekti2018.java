@@ -8,7 +8,7 @@ package loppuprojekti2018;
 /**
  * This is the class for the user side of this program.
  * This will only interact with the Main Controller Class.
- * 
+ * lolollolo
  */
 public class LoppuProjekti2018 {
     /**
