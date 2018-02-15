@@ -10,3 +10,5 @@ Russian Rulette, with cards
 BlackJack
 
 and a 3 card Tarot spread covering the Past, the Present and the Future.
+
+A version of Russian Roulette with a deck of cards.
