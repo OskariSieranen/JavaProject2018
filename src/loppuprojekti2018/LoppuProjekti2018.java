@@ -16,7 +16,6 @@ public class LoppuProjekti2018 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        double lol = 0;
         System.out.println("lol");
         
     }
