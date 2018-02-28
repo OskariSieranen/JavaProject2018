@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Tarot;
+
+import java.util.*;
 /**
  * A list of Tarot cards.
  * @author aamu
@@ -11,28 +13,34 @@ package Tarot;
 */
 
 public class TarotDeck {
-    private Card[] deck =  new Card[] {
-        new Card("The Fool", "0", "Beginnings | Innocence | Spontaneity"),
-        new Card("The Magician", "I", "Power | Skill | Action"),
-        new Card("The High Priestess", "II", "Intuition | Higher Powers | Mystery"),
-        new Card("The Empress", "III", "Fertility | Beauty | Nature"),
-        new Card("The Emperor", "IV", "Authority | Structure | Solid Foundation"),
-        new Card("The Hierophant", "V", "Religion | Beliefs | Tradition"),
-        new Card("The Lovers", "VI", "Love | Union | Choices"),
-        new Card("The Chariot", "VII", "Control | Will Power | Victory"),
-        new Card("Strength", "VIII", "Strength | Patience | Control"),
-        new Card("The Hermit", "IX", "Introspection | Being Alone | Inner Guidance"),
-        new Card("Wheel of Fortune", "X", "Destiny | Turning Point | Good Luck"),
-        new Card("Justice", "XI", "Justice | Fairness | Truth"),
-        new Card("The Hanged Man", "XII", "Sacrifice | Letting Go | Suspension"),
-        new Card("Death", "XIII", "Transformation | Endings | Change"),
-        new Card("Temperance", "XIV", "Balance | Moderation | Purpose"),
-        new Card("The Devil", "XV", "Addicition | Materialism | Sexuality"),
-        new Card("The Tower", "XVI", "Disaster | Revelation | Sudden Change"),
-        new Card("The Star", "XVII", "Hope | Renewal | Serenity"),
-        new Card("The Moon", "XVIII", "Illusion | Fear | Subconcious"),
-        new Card("The Sun", "XIX", "Warmth | Positivity | Vitality"),
-        new Card("Judgement", "XX", "Absolution | Rebirth | Inner Calling"),
-        new Card("The World", "XXI", "Completion | Journey | Accomplishment")
-    };
+    public static void main(String[] args) {
+        
+    
+    //Card[] tarotdeck =  new Card[] {
+    ArrayList<Card> tarotdeck = new ArrayList();
+        tarotdeck.add(new Card("The Fool", "0", "Beginnings | Innocence | Spontaneity"));
+        tarotdeck.add(new Card("The Magician", "I", "Power | Skill | Action"));
+        tarotdeck.add(new Card("The High Priestess", "II", "Intuition | Higher Powers | Mystery"));
+        tarotdeck.add(new Card("The Empress", "III", "Fertility | Beauty | Nature"));
+        tarotdeck.add(new Card("The Emperor", "IV", "Authority | Structure | Solid Foundation"));
+        tarotdeck.add(new Card("The Hierophant", "V", "Religion | Beliefs | Tradition"));
+        tarotdeck.add(new Card("The Lovers", "VI", "Love | Union | Choices"));
+        tarotdeck.add(new Card("The Chariot", "VII", "Control | Will Power | Victory"));
+        tarotdeck.add(new Card("Strength", "VIII", "Strength | Patience | Control"));
+        tarotdeck.add(new Card("The Hermit", "IX", "Introspection | Being Alone | Inner Guidance"));
+        tarotdeck.add(new Card("Wheel of Fortune", "X", "Destiny | Turning Point | Good Luck"));
+        tarotdeck.add(new Card("Justice", "XI", "Justice | Fairness | Truth"));
+        tarotdeck.add(new Card("The Hanged Man", "XII", "Sacrifice | Letting Go | Suspension"));
+        tarotdeck.add(new Card("Death", "XIII", "Transformation | Endings | Change"));
+        tarotdeck.add(new Card("Temperance", "XIV", "Balance | Moderation | Purpose"));
+        tarotdeck.add(new Card("The Devil", "XV", "Addicition | Materialism | Sexuality"));
+        tarotdeck.add(new Card("The Tower", "XVI", "Disaster | Revelation | Sudden Change"));
+        tarotdeck.add(new Card("The Star", "XVII", "Hope | Renewal | Serenity"));
+        tarotdeck.add(new Card("The Moon", "XVIII", "Illusion | Fear | Subconcious"));
+        tarotdeck.add(new Card("The Sun", "XIX", "Warmth | Positivity | Vitality"));
+        tarotdeck.add(new Card("Judgement", "XX", "Absolution | Rebirth | Inner Calling"));
+        tarotdeck.add(new Card("The World", "XXI", "Completion | Journey | Accomplishment"));
+    
+        Collections.shuffle(tarotdeck);
+    }
 }
