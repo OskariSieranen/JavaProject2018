@@ -11,4 +11,8 @@ package Blackjack;
  */
 public class Pakka {
     
+    public Pakka (){}
+    
+    
+    
 }
