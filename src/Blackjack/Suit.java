@@ -9,10 +9,8 @@ package Blackjack;
  *
  * @author Pate
  */
-public class Pakka {
+public enum Suit {
     
-    public Pakka (){}
-    
-    
+   SPADE, DIAMOND, CLUB, HEART
     
 }
