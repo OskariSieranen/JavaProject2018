@@ -6,18 +6,19 @@
 package Tarot;
 
 import java.util.*;
+
 /**
  * A list of Tarot cards.
- * @author aamu
- * Source for most of the meanings: https://www.biddytarot.com/tarot-card-meanings/major-arcana/
-*/
+ *
+ * @author aamu Source for most of the meanings:
+ * https://www.biddytarot.com/tarot-card-meanings/major-arcana/
+ */
 
 public class TarotDeck {
+
     public static void main(String[] args) {
-        
-    
-    //Card[] tarotdeck =  new Card[] {
-    ArrayList<Card> tarotdeck = new ArrayList();
+
+        ArrayList<Card> tarotdeck = new ArrayList();
         tarotdeck.add(new Card("The Fool", "0", "Beginnings | Innocence | Spontaneity"));
         tarotdeck.add(new Card("The Magician", "I", "Power | Skill | Action"));
         tarotdeck.add(new Card("The High Priestess", "II", "Intuition | Higher Powers | Mystery"));
@@ -40,7 +41,12 @@ public class TarotDeck {
         tarotdeck.add(new Card("The Sun", "XIX", "Warmth | Positivity | Vitality"));
         tarotdeck.add(new Card("Judgement", "XX", "Absolution | Rebirth | Inner Calling"));
         tarotdeck.add(new Card("The World", "XXI", "Completion | Journey | Accomplishment"));
-    
+
         Collections.shuffle(tarotdeck);
+        System.out.println("Your past is governed by: " + tarotdeck.get(0) );
+        tarotdeck.remove(0);
+        System.out.println("Your precense is governed by " + tarotdeck.get(0));
+        tarotdeck.remove(0);
+        System.out.println("Your future is governed by " + tarotdeck.get(0));
     }
 }

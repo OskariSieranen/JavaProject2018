@@ -17,4 +17,8 @@ public class Card {
         this.number = number;
         this.description = description;
     }
+    public String toString() {
+        return number + " " + name + " meaning: " + description;
+    }
+    
 }
