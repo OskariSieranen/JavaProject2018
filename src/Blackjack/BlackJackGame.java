@@ -83,7 +83,7 @@ public class BlackJackGame {
                 }
                 
                 if (response == 2){
-                    
+                    // videossa kohdassa 45:26
                     
                 }
                 

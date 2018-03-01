@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/aamu/Documents/Koulu/Ohjelmointi/Java/JavaProject2018/src/loppuprojekti2018/LoppuProjekti2018.java</file>
+            <file>file:/C:/Users/Pate/Documents/NetBeansProjects/JavaProject2018/JavaProject2018/src/Blackjack/Card.java</file>
+            <file>file:/C:/Users/Pate/Documents/NetBeansProjects/JavaProject2018/JavaProject2018/src/loppuprojekti2018/LoppuProjekti2018.java</file>
+            <file>file:/C:/Users/Pate/Documents/NetBeansProjects/JavaProject2018/JavaProject2018/src/Blackjack/Suit.java</file>
+            <file>file:/C:/Users/Pate/Documents/NetBeansProjects/JavaProject2018/JavaProject2018/src/Blackjack/Value.java</file>
+            <file>file:/C:/Users/Pate/Documents/NetBeansProjects/JavaProject2018/JavaProject2018/src/Blackjack/BlackJackGame.java</file>
+            <file>file:/C:/Users/Pate/Documents/NetBeansProjects/JavaProject2018/JavaProject2018/src/Blackjack/CardDeck.java</file>
         </group>
     </open-files>
 </project-private>
