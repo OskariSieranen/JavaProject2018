@@ -77,10 +77,30 @@ public class CardDeck {
     }
 
     //drawing from the deck
+    //in the CardDeck drawing from we will refer to the deck we want to draw from
+    //by inserting its name to playerDeck.draw(playingDeck); playingDeck slot
+    //this.cards.add means the deck we are adding them to basicly it makes a copy of the card
+    //so in the last line we refer to the playingDeck again with the drawingFrom and then
+    //we remove the card from the top of the imaginary deck so the first cell of the list
     public void draw(CardDeck drawingFrom) {
         this.cards.add(drawingFrom.getCard(0));
         drawingFrom.removeCard(0);
 
+    }
+    
+    // dealerDeck.moveALLcardsToDeck(playingDeck);
+    public void moveALLcardsToDeck(CardDeck moveTo){
+        int thisDeckSize = this.cards.size();
+        
+        //put cards into moveTo deck
+        for(int i = 0; i < thisDeckSize; i ++){
+            moveTo.addCard(this.getCard(i));
+            
+        }
+        //removing cards from hand
+        for (int i = 0; i < thisDeckSize; i++){
+            this.removeCard(0);
+        }
     }
 
     //shows how many cards there is in a hand

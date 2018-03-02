@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Blackjack
 #netbeans files
 
 build.xml
 manifest.mf
 /nbproject/private/
+<<<<<<< HEAD
 =======
 #netbeans files
 
@@ -12,3 +16,11 @@ manifest.mf
 /nbproject/private/
 >>>>>>> Blackjack
 /build/
+=======
+#netbeans files
+
+build.xml
+manifest.mf
+/nbproject/private/
+/build/
+>>>>>>> Blackjack
