@@ -3,4 +3,9 @@
 build.xml
 manifest.mf
 /nbproject/private/
+#netbeans files
+
+build.xml
+manifest.mf
+/nbproject/private/
 /build/
