@@ -9,6 +9,7 @@ package Blackjack;
  *
  * @author Pate
  */
+//properties of card
 public class Card {
 
     private Suit suit;
