@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package UI;
 
 /**
  *
  * @author aamu
  */
-public class Lol {
-    public String toString() {
-    return "lol";
+public class UI {
+    public static void main(String[] args) {
+        Controller.Controller.main(args);
+        
     }
 }
