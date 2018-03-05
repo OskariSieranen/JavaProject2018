@@ -4,9 +4,8 @@
  * and open the template in the editor. 
  */ 
 package Controller;
-import Blackjack.BlackJackGame;
-import Tarot.TarotDeck;
-import javax.swing.JOptionPane;
+import java.util.Scanner;
+
 /**
  * Controller class for the games found within.
  * 
@@ -14,8 +13,27 @@ import javax.swing.JOptionPane;
 public class Controller {
 
     public static void main(String[] args) {
-        BlackJackGame BJG = new BlackJackGame();
+        int ans;
+        Scanner sc = new Scanner(System.in);
         
+        System.out.println("Choose your game of choice:");
+        System.out.println("(1) Blackjack");
+        System.out.println("(2) Russian Roulette");
+        System.out.println("(3) A Tarot Reading");
+        
+        ans = sc.nextInt();
+        
+        switch (ans) {
+            case 1: Blackjack.BlackJackGame.main(args);
+                    break;
+            
+            
+            case 3: Tarot.TarotDeck.main(args);
+                    break;
+            default: System.out.println("Pick a valid option");
+            
+        
+        }
         
     }
     
