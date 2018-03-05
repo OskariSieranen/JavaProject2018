@@ -18,6 +18,7 @@ public class RussianRouletteGame {
         Scanner sc = new Scanner(System.in);
         
         String special;
+        int firstcard;
 
         //Ask player whether he/she already knows the rules. If he/she doesn't know, tutorial starts. If he/she knows, skips the tutorial. 
         int choice = JOptionPane.showOptionDialog(null,
@@ -67,16 +68,17 @@ public class RussianRouletteGame {
         
         //Draw a Card
          playerHand.draw(playingDeck);
+         firstcard = playerHand.cardsValue();
          JOptionPane.showMessageDialog(null, "You drew:" + "\n" + playerHand.toString());
          special = playerHand.toString();
          
          //Drawing more Cards
          
              
-         for (int i = 1; i <= playerHand.cardsValue(); i++) {
+         for (int i = 1; i <= firstcard; i++) {
              playerHand.draw(playingDeck);
          }
-         JOptionPane.showMessageDialog(null, "You drew " + playerHand.cardsValue() + " cards");
+         JOptionPane.showMessageDialog(null, "You drew " + firstcard + " cards");
          JOptionPane.showMessageDialog(null, "Now you have: " + playerHand.toString());
 
     }
