@@ -10,7 +10,7 @@ import javax.swing.*;
 /**
  * A list of Tarot cards.
  *
- * @author aamu Source for most of the meanings:
+ * aamu Source for most of the meanings:
  * https://www.biddytarot.com/tarot-card-meanings/major-arcana/
  */
 
