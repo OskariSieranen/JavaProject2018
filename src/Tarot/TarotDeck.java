@@ -6,7 +6,7 @@
 package Tarot;
 
 import java.util.*;
-
+import javax.swing.*;
 /**
  * A list of Tarot cards.
  *
@@ -43,10 +43,12 @@ public class TarotDeck {
         tarotdeck.add(new Card("The World", "XXI", "Completion | Journey | Accomplishment"));
 
         Collections.shuffle(tarotdeck);
-        System.out.println("Your past is governed by: " + tarotdeck.get(0) );
+        JOptionPane.showMessageDialog(null, "Your past is governed by: " + tarotdeck.get(0));
         tarotdeck.remove(0);
-        System.out.println("Your precense is governed by " + tarotdeck.get(0));
+        JOptionPane.showMessageDialog(null, "Your precense is governed by " + tarotdeck.get(0));
         tarotdeck.remove(0);
-        System.out.println("Your future is governed by " + tarotdeck.get(0));
+        JOptionPane.showMessageDialog(null, "Your future is governed by " + tarotdeck.get(0));
+        
+        
     }
 }
