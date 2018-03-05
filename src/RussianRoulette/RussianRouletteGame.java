@@ -102,12 +102,13 @@ public class RussianRouletteGame {
         if (mode == JOptionPane.NO_OPTION) {
             int firstcardvalue;
             String firstcard;
+            boolean repeat = true;
 
             //Ask player whether he/she already knows the rules. If he/she doesn't know, tutorial starts. If he/she knows, skips the tutorial. 
             int choice = JOptionPane.showOptionDialog(null,
                     "This is the Versus mode!"
                     + "\nAre you familiar with the rules?",
-                    "Survival",
+                    "Versus",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
                     null, null, null);
@@ -115,95 +116,119 @@ public class RussianRouletteGame {
             //Tutorial
             if (choice == JOptionPane.NO_OPTION) {
 
+                JOptionPane.showMessageDialog(null, "GAME RULES:"
+                        + "\nYou are playing against a computer."
+                        + "\nYou and your opponent are taking turns of drawing cards from a deck of 52 cards."
+                        + "The goal of the game is to avoid drawing the Ace of Spades aka \"The Bullet\".");
 
-            JOptionPane.showMessageDialog(null, "GAME RULES:"
-                    + "\nYou are playing agains a computer."
-                    + "\nYou and your opponent are taking turns of drawing cards from a deck of 52 cards."
-                    + "The goal of the game is to avoid drawing the Ace of Spades aka \"The Bullet\".");
+                JOptionPane.showMessageDialog(null, "Easy! Right?!");
 
-            JOptionPane.showMessageDialog(null, "Easy! Right?!");
+                JOptionPane.showMessageDialog(null, "Well... there is a twist to it. The value of the card that you draw will determine how many other cards you'll be drawing that turn.");
 
-            JOptionPane.showMessageDialog(null, "Well... there is a twist to it. The value of the card that you draw will determine how many other cards you'll be drawing that turn.");
+                JOptionPane.showMessageDialog(null, "This is how it works:"
+                        + "\nTWO = Draw 2 Cards"
+                        + "\nTHREE = Draw 3 Cards"
+                        + "\nFOUR = Draw 4 Cards"
+                        + "\nFIVE = Draw 5 Cards"
+                        + "\nSIX = Draw 1 Card"
+                        + "\nSEVEN = Draw 2 Cards"
+                        + "\nEIGHT = Draw 3 Cards" + " and so on..");
 
-            JOptionPane.showMessageDialog(null, "This is how it works:"
-                    + "\nTWO = Draw 2 Cards"
-                    + "\nTHREE = Draw 3 Cards"
-                    + "\nFOUR = Draw 4 Cards"
-                    + "\nFIVE = Draw 5 Cards"
-                    + "\nSIX = Draw 1 Card"
-                    + "\nSEVEN = Draw 2 Cards"
-                    + "\nEIGHT = Draw 3 Cards" + " and so on..");
+                JOptionPane.showMessageDialog(null, "The face cards are safe cards. If a player draws one of them, he won't need to draw any other cards that turn.");
 
-            JOptionPane.showMessageDialog(null, "The face cards are safe cards. If a player draws one of them, he won't need to draw any other cards that turn.");
+                JOptionPane.showMessageDialog(null, "But what you want to be drawing are the Aces, exept \"The Bullet\" of course...");
 
-            JOptionPane.showMessageDialog(null, "But what you want to be drawing are the Aces, exept \"The Bullet\" of course...");
+                JOptionPane.showMessageDialog(null, "If one happens draw one of the three Aces, the opponent has to draw 5 extra cards ");
 
-            JOptionPane.showMessageDialog(null, "If one happens draw one of the three Aces, the opponent has to draw 5 extra cards ");
+                JOptionPane.showMessageDialog(null, "So... you got the rules right?");
 
-            JOptionPane.showMessageDialog(null, "So... you got the rules right?");
-
-            JOptionPane.showMessageDialog(null, "If so, press that OK-button once more and the game will start. Have fun playing and be careful not to blast your brains out!");
+                JOptionPane.showMessageDialog(null, "If so, press that OK-button once more and the game will start. Have fun playing and be careful not to blast your brains out!");
             }
             //Creating a full shuffled deck
             CardDeck playingDeck = new CardDeck();
             playingDeck.createFullDeck();
             playingDeck.shuffle();
-            //This is players hand
             CardDeck playerHand = new CardDeck();
-            //This is computers hand
             CardDeck cpuHand = new CardDeck();
+            CardDeck trashBin = new CardDeck();
 
             //Player draws a Card
-            while (!playerHand.toString().contains("ACE OF SPADES") && !cpuHand.toString().contains("ACE OF SPADES")) {
+            while (repeat == true) {
+                //This is players hand
                 playerHand.draw(playingDeck);
                 firstcardvalue = playerHand.cardsValue();
                 firstcard = playerHand.toString();
                 JOptionPane.showMessageDialog(null, "You drew:" + "\n" + firstcard);
 
-                if (firstcard.contains("ACE")) {
+                if (firstcard.contains("ACE OF SPADES")) {
+
+                } else if (firstcard.contains("ACE")) {
                     JOptionPane.showMessageDialog(null, "Your opponent drew 5 cards");
                     for (int i = 1; i <= 5; i++) {
                         cpuHand.draw(playingDeck);
                     }
-                    JOptionPane.showMessageDialog(null, "Your opponent got: " + cpuHand.toString());
+                    JOptionPane.showMessageDialog(null, "Your opponent now has:" + "\n" + cpuHand.toString());
                 } //Player draws more cards
                 else {
                     for (int i = 1; i <= firstcardvalue; i++) {
                         playerHand.draw(playingDeck);
                     }
                     JOptionPane.showMessageDialog(null, "You drew " + firstcardvalue + " cards");
-                    JOptionPane.showMessageDialog(null, "Now you have: " + playerHand.toString());
+                    JOptionPane.showMessageDialog(null, "Now you have:" + "\n" + playerHand.toString());
                 }
-                //Computer draws a card
-                cpuHand.draw(playingDeck);
-                firstcardvalue = cpuHand.cardsValue();
-                firstcard = cpuHand.toString();
-                JOptionPane.showMessageDialog(null, "Your opponent drew:" + "\n" + firstcard);
+                //Checks if "The Bullet" was drawn. If it was game ends. 
+                if (playerHand.toString().contains("ACE OF SPADES")) {
+                    JOptionPane.showMessageDialog(null, "BANG!");
+                    JOptionPane.showMessageDialog(null, "You lost!\nBetter luck next time...I guess...");
+                    repeat = false;
+                }
+                if (cpuHand.toString().contains("ACE OF SPADES")) {
+                    JOptionPane.showMessageDialog(null, "BANG!");
+                    JOptionPane.showMessageDialog(null, "You won!\nCongratulations!");
+                    repeat = false;
+                } else {
+                    //Empties hands into a dump deck
+                    playerHand.moveALLcardsToDeck(trashBin);
+                    cpuHand.moveALLcardsToDeck(trashBin);
+                    // Computer draws a card
+                    cpuHand.draw(playingDeck);
+                    firstcardvalue = cpuHand.cardsValue();
+                    firstcard = cpuHand.toString();
+                    JOptionPane.showMessageDialog(null, "Your opponent drew:" + "\n" + firstcard);
 
-                if (firstcard.contains("ACE")) {
-                    JOptionPane.showMessageDialog(null, "You drew 5 cards");
-                    for (int i = 1; i <= 5; i++) {
-                        playerHand.draw(playingDeck);
+                    if (firstcard.contains("ACE OF SPADES")) {
+
+                    } else if (firstcard.contains("ACE")) {
+                        JOptionPane.showMessageDialog(null, "You drew 5 cards");
+                        for (int i = 1; i <= 5; i++) {
+                            playerHand.draw(playingDeck);
+                        }
+                        JOptionPane.showMessageDialog(null, "You now have:" + "\n" + playerHand.toString());
+
+                    } //Computer draws more cards
+                    else {
+                        for (int i = 1; i <= firstcardvalue; i++) {
+                            cpuHand.draw(playingDeck);
+                        }
+                        JOptionPane.showMessageDialog(null, "Opponent drew " + firstcardvalue + " cards");
+                        JOptionPane.showMessageDialog(null, "Your opponent now has:" + "\n" + cpuHand.toString());
                     }
-                    JOptionPane.showMessageDialog(null, "You got: " + playerHand.toString());
-                } //Computer draws more cards
-                else {
-                    for (int i = 1; i <= firstcardvalue; i++) {
-                        cpuHand.draw(playingDeck);
+                    //Checks if "The Bullet" was drawn. If it was game ends. 
+                    if (playerHand.toString().contains("ACE OF SPADES")) {
+                        JOptionPane.showMessageDialog(null, "BANG!");
+                        JOptionPane.showMessageDialog(null, "You lost!\nBetter luck next time...I guess...");
+                        repeat = false;
                     }
-                    JOptionPane.showMessageDialog(null, "Opponent drew " + firstcardvalue + " cards");
-                    JOptionPane.showMessageDialog(null, "Now opponent has: " + cpuHand.toString());
+                    if (cpuHand.toString().contains("ACE OF SPADES")) {
+                        JOptionPane.showMessageDialog(null, "BANG!");
+                        JOptionPane.showMessageDialog(null, "You won!\nCongratulations!");
+                        repeat = false;
+                    }
+                    //Empties hands into a dump deck
+                    playerHand.moveALLcardsToDeck(trashBin);
+                    cpuHand.moveALLcardsToDeck(trashBin);
                 }
-            }
-            JOptionPane.showMessageDialog(null, "BANG!");
-            if (!playerHand.toString().contains("ACE OF SPADES")) {
-                JOptionPane.showMessageDialog(null, "You lost!");
-                JOptionPane.showMessageDialog(null, "Better luck next time... I guess...");
-            } else {
-                JOptionPane.showMessageDialog(null, "You won!");
-                JOptionPane.showMessageDialog(null, "Congratulations!");
             }
         }
-
     }
 }
