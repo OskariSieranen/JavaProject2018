@@ -10,7 +10,7 @@ import javax.swing.*;
 /**
  * A list of Tarot cards.
  *
- * @author aamu Source for most of the meanings:
+ * aamu Source for most of the meanings:
  * https://www.biddytarot.com/tarot-card-meanings/major-arcana/
  */
 
@@ -43,11 +43,11 @@ public class TarotDeck {
         tarotdeck.add(new Card("The World", "XXI", "Completion | Journey | Accomplishment"));
 
         Collections.shuffle(tarotdeck);
-        JOptionPane.showMessageDialog(null, "Your past is governed by: " + tarotdeck.get(0));
+        JOptionPane.showMessageDialog(null, "Your past is governed by: " + "\n" + tarotdeck.get(0));
         tarotdeck.remove(0);
-        JOptionPane.showMessageDialog(null, "Your precense is governed by " + tarotdeck.get(0));
+        JOptionPane.showMessageDialog(null, "Your precense is governed by " + "\n" + tarotdeck.get(0));
         tarotdeck.remove(0);
-        JOptionPane.showMessageDialog(null, "Your future is governed by " + tarotdeck.get(0));
+        JOptionPane.showMessageDialog(null, "Your future is governed by " + "\n" + tarotdeck.get(0));
         
         
     }

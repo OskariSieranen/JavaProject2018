@@ -32,10 +32,6 @@ public class Controller {
             case 2:Tarot.TarotDeck.main(args);
                     break;
             default: System.out.println("Pick a valid option");
-            
-            
-        
-        
         }
         
     }

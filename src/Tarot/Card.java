@@ -7,7 +7,7 @@ package Tarot;
 
 /**
  * The Tarot card object
- * @author aamu
+ * 
  */
 public class Card {
     String name, number, description;

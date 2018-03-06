@@ -87,18 +87,18 @@ public class CardDeck {
         drawingFrom.removeCard(0);
 
     }
-    
+
     // dealerDeck.moveALLcardsToDeck(playingDeck);
-    public void moveALLcardsToDeck(CardDeck moveTo){
+    public void moveALLcardsToDeck(CardDeck moveTo) {
         int thisDeckSize = this.cards.size();
-        
+
         //put cards into moveTo deck
-        for(int i = 0; i < thisDeckSize; i ++){
+        for (int i = 0; i < thisDeckSize; i++) {
             moveTo.addCard(this.getCard(i));
-            
+
         }
         //removing cards from hand
-        for (int i = 0; i < thisDeckSize; i++){
+        for (int i = 0; i < thisDeckSize; i++) {
             this.removeCard(0);
         }
     }
