@@ -176,6 +176,7 @@ public class RussianRouletteGame {
                     JOptionPane.showMessageDialog(null, "You drew " + firstcardvalue + " cards");
                     JOptionPane.showMessageDialog(null, "Now you have:" + "\n" + playerHand.toString());
                 }
+               // TODO Aces shuffle the deck even if they were in the drawn pile. Ace of Spades does this also.
                 //Checks if "The Bullet" was drawn. If it was game ends. 
                 if (playerHand.toString().contains("ACE OF SPADES")) {
                     JOptionPane.showMessageDialog(null, "BANG!");
