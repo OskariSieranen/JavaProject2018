@@ -43,7 +43,7 @@ public class CardDeck {
         int originalSize = this.cards.size();
         for (int i = 0; i < originalSize; i++) {
             //Generating Random index
-            randomCardIndex = random.nextInt((this.cards.size() - 1 - 0) + 1) + 0;
+            randomCardIndex = random.nextInt(this.cards.size());
             //adding the random card to the temporary deck
             tmpDeck.add(this.cards.get(randomCardIndex));
             //removing the random card from the original deck so that the shuffle will keep working nornally

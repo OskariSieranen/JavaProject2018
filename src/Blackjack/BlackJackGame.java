@@ -85,7 +85,7 @@ public class BlackJackGame {
                         break;
                     }
                 }
-                // videossa kohdassa 45:26
+                //Dealer hitting
                 if (response == JOptionPane.NO_OPTION) {
                     //dealer will keep hitting untill his hand value is  at 17 or higher
                     while ((dealerDeck.cardsValue() < 17) && endRound == false) {
