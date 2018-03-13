@@ -14,8 +14,7 @@ public class Controller {
 
     public static void main(String[] args) {
         int ans;
-        Scanner sc = new Scanner(System.in);
-        String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading"};
+        String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading", "Roulette"};
 
         ans = JOptionPane.showOptionDialog(null, 
                 "Choose your game of choice:",
@@ -29,8 +28,9 @@ public class Controller {
                     break;
             case 1: RussianRoulette.RussianRouletteGame.main(args);
                     break;
-            case 2:Tarot.TarotDeck.main(args);
+            case 2: Tarot.TarotDeck.main(args);
                     break;
+            case 3: Roulette.Roulette.main(args);
             default: System.out.println("Pick a valid option");
         }
         
