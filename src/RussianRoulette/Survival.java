@@ -4,10 +4,10 @@ package RussianRoulette;
 import javax.swing.JOptionPane;
 
 /**
- *This is a game mode called V (Russian Roulette) and it is played against the computer.
- * The idea is to take turns drawing playing cards from a deck of 52 cards one at a time.
- * The value of the first card drawn in a turn, determines how many other cards must be drawn.
- * The one who draws the Ace of Spades first loses.
+ *This is a game mode called Survival (Russian Roulette).
+ * The idea is to draw cards from a deck of 52 cards one at a time.
+ * The value of the first card drawn in a turn, determines how many other cards must be drawn that turn.
+ * When the Ace of Spades is drawn the game ends and survived rounds are shown.
  * @author joona
  */
 public class Survival {

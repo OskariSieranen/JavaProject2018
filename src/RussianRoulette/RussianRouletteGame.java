@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package RussianRoulette;
 
 import java.util.Scanner;
@@ -15,7 +11,6 @@ import javax.swing.JOptionPane;
 public class RussianRouletteGame {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         //Asks player whether he/she wants to play survival or versus mode 
         Object[] options = {"Survival", "Versus", "Main Menu"};

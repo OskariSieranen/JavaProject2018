@@ -36,21 +36,23 @@ public class CardDeck {
 
     }
 
+    //I hate github too
+    
     //Creates the shuffle mechanism
     public void shuffle() {
         //Creates a new empty deck
         ArrayList<Card> tmpDeck = new ArrayList<Card>();
         //Uses the Random object 
         Random random = new Random();
-        //A card that i pull out of the deck
-        int randomCardIndex = 0;
+        //A card that gets pulled out of the deck
+        int randomCardIndex;
         int originalSize = this.cards.size();
         for (int i = 0; i < originalSize; i++) {
             //Generates Random index
-            randomCardIndex = random.nextInt((this.cards.size() - 1 - 0) + 1) + 0;
-            //Adds the random card to the temporary deck
+            randomCardIndex = random.nextInt(this.cards.size());
+            //Adds the random card to a temporary deck
             tmpDeck.add(this.cards.get(randomCardIndex));
-            //Removes the random card from the original deck so that the shuffle will keep working nornally
+            //Removes the random card from the original deck so that the shuffle will keep working normally
             this.cards.remove(randomCardIndex);
         }
 
@@ -101,12 +103,12 @@ public class CardDeck {
     public void moveALLcardsToDeck(CardDeck moveTo) {
         int thisDeckSize = this.cards.size();
 
-        //put cards into moveTo deck
+        //Puts cards into moveTo deck
         for (int i = 0; i < thisDeckSize; i++) {
             moveTo.addCard(this.getCard(i));
 
         }
-        //removing cards from hand
+        //Removes cards from hand
         for (int i = 0; i < thisDeckSize; i++) {
             this.removeCard(0);
         }
