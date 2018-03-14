@@ -17,7 +17,6 @@ public class CoinFlip {
         double quess = 0;
         double playerpoints = 0;
         double quessIndex;
-        // JOptionPane.showMessageDialog(null, "Welcome to my Blackjack table, take a seat");
         JOptionPane.showMessageDialog(null, "Welcome to my coin flipping game \nYou have 5 quesses \nif you quess right you get a point!\nif you quess wrong you lose a point");
 
         while (quess < 5) {
@@ -45,7 +44,6 @@ public class CoinFlip {
                         playerpoints += 1;
                         JOptionPane.showMessageDialog(null, "You quessed right! \nYou now have" + playerpoints + " points");
                     } else {
-                        //if (quessIndex == 2) {
                         playerpoints -= 1;
                         JOptionPane.showMessageDialog(null, "You quessed wrong! \nYou now have" + playerpoints + " points");
                     }
@@ -57,7 +55,6 @@ public class CoinFlip {
                         playerpoints -= 1;
                         JOptionPane.showMessageDialog(null, "You quessed wrong! \nYou now have" + playerpoints + " points");
                     } else {
-                        //if (quessIndex == 2){
                         playerpoints += 1;
                         JOptionPane.showMessageDialog(null, "You quessed right! \nYou now have" + playerpoints + " points");
                     }
