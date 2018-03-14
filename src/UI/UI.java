@@ -4,14 +4,20 @@
  * and open the template in the editor.
  */
 package UI;
-
+import javax.swing.*;
 /**
  *
  * @author aamu
  */
 public class UI {
     public static void main(String[] args) {
-        Controller.Controller.main(args);
+        boolean game = true;
         
+        //TODO set that confirm dialog to change the boolean to false.
+        if (game = true) {
+                Controller.Controller.main(args);
+                JOptionPane.showConfirmDialog(null, "Do you want to play again?");
+                
+        }
     }
 }
