@@ -36,7 +36,7 @@ public class Roulette {
             double guess = Double.parseDouble(JOptionPane.showInputDialog(null, "What is your guess between 0-36"));
             
             double roulette = (0 + (int) (Math.random() * (36 - 0) + 1));
-
+            
             while (guess < 0 || guess > 36) {
                 JOptionPane.showInputDialog(null, "You need to input a correct amount!");
                 guess = sc.nextInt();
