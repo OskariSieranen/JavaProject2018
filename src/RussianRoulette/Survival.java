@@ -33,7 +33,7 @@ public class Survival {
         if (choice2 == JOptionPane.NO_OPTION) {
 
             JOptionPane.showMessageDialog(null, "GAME RULES:"
-                    + "\nEvery turn you'll draw a random card from a normal deck of 52 cards."
+                    + "\nEvery turn you'll draw a random card from a normal deck of 52 cards. "
                     + "The goal of the game is survive as many rounds as possible without drawing the Ace of Spades aka \"The Bullet\".");
 
             JOptionPane.showMessageDialog(null, "Easy! Right?!");

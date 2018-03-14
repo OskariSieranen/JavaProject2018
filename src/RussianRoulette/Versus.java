@@ -154,7 +154,9 @@ public class Versus {
             //and the deck gets resuffled; NO = goes back to mode menu
             if (repeat == false) {
                 int choice3 = JOptionPane.showOptionDialog(null,
-                        "Wins: " + wins + "\nAgain?",
+                        "Wins: " + wins
+                        + "Losses: " + losses        
+                        + "\nAgain?",
                         "Versus",
                         JOptionPane.YES_NO_OPTION,
                         JOptionPane.QUESTION_MESSAGE,
