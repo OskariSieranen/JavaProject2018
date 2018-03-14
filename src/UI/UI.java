@@ -18,5 +18,6 @@ public class UI {
                 Controller.Controller.main(args);
                 game = JOptionPane.showConfirmDialog(null, "Do you want to play again?");
         }
+        JOptionPane.showMessageDialog(null, "Thank you for playing!");
     }
 }

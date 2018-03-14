@@ -15,7 +15,7 @@ public class Controller {
     public static void main(String[] args) {
         int ans;
         String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading", "Roulette"};
-
+        
         ans = JOptionPane.showOptionDialog(null, 
                 "Choose your game of choice:",
                 "Choose your game",
