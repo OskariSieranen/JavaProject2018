@@ -5,13 +5,14 @@
  */
 package Tarot;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.*;
 import javax.swing.*;
 /**
  * A list of Tarot cards.
  *
  * aamu Source for most of the meanings:
- * https://www.biddytarot.com/tarot-card-meanings/major-arcana/
  */
 
 public class TarotDeck {
@@ -54,3 +55,4 @@ public class TarotDeck {
         
     }
 }
+

@@ -27,8 +27,9 @@ public class Roulette {
         while (chips > 0) {
             double bet = Double.parseDouble(JOptionPane.showInputDialog(null, "How much would you like to bet"));
 
-            if (chips < bet) {
+            while (chips < bet) {
                 JOptionPane.showMessageDialog(null, "You can't bet more than you have!");
+                bet = Double.parseDouble(JOptionPane.showInputDialog(null, "Please bet again!"));
             }
 
             JOptionPane.showMessageDialog(null, "You bet " + bet);
@@ -36,7 +37,7 @@ public class Roulette {
             double guess = Double.parseDouble(JOptionPane.showInputDialog(null, "What is your guess between 0-36"));
             
             double roulette = (0 + (int) (Math.random() * (36 - 0) + 1));
-
+            
             while (guess < 0 || guess > 36) {
                 JOptionPane.showInputDialog(null, "You need to input a correct amount!");
                 guess = sc.nextInt();
