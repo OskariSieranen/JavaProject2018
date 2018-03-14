@@ -155,7 +155,7 @@ public class Versus {
             if (repeat == false) {
                 int choice3 = JOptionPane.showOptionDialog(null,
                         "Wins: " + wins
-                        + "Losses: " + losses        
+                        + "\nLosses: " + losses        
                         + "\nAgain?",
                         "Versus",
                         JOptionPane.YES_NO_OPTION,
