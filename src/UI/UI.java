@@ -13,7 +13,7 @@ public class UI {
     public static void main(String[] args) {
         int game = 0;
         
-        //TODO set that confirm dialog to change the boolean to false.
+        //TODO set to option dialog with yes and no options.
         while (game == JOptionPane.YES_OPTION) {
                 Controller.Controller.main(args);
                 game = JOptionPane.showConfirmDialog(null, "Do you want to play again?");
