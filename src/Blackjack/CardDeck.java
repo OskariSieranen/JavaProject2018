@@ -32,7 +32,7 @@ public class CardDeck {
         }
 
     }
-
+// i hate github
     public void shuffle() {
         //here i create a new empty deck
         ArrayList<Card> tmpDeck = new ArrayList<Card>();
