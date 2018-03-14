@@ -6,7 +6,6 @@
 // idea: if the player gets blackjack in the first 2 cards multiply his bet by 2 or sumthing.
 package Blackjack;
 
-import java.util.Scanner;
 import javax.swing.*;
 
 /**
@@ -16,8 +15,6 @@ import javax.swing.*;
 public class BlackJackGame {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        //double chips = 100.0000;
 
         //Welcome the user
         JOptionPane.showMessageDialog(null, "Welcome to my Blackjack table, take a seat");
@@ -123,11 +120,11 @@ public class BlackJackGame {
             if ((playerDeck.cardsValue() > dealerDeck.cardsValue() && endRound == false)) {
                 JOptionPane.showMessageDialog(null, "You win ");
                 chips += bet;
-                endRound = true;
+
             } else if (endRound == false) {
                 JOptionPane.showMessageDialog(null, "You lost that round.");
                 chips -= bet;
-                endRound = true;
+
             }
 
             playerDeck.moveALLcardsToDeck(playingDeck);
