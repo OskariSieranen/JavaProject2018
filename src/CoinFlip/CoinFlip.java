@@ -14,12 +14,12 @@ import javax.swing.*;
 public class CoinFlip {
 
     public static void main(String[] args) {
-        double quess = 0;
+        double guess = 0;
         double playerpoints = 0;
-        double quessIndex;
-        JOptionPane.showMessageDialog(null, "Welcome to my coin flipping game \nYou have 5 quesses \nif you quess right you get a point!\nif you quess wrong you lose a point");
+        double guessIndex;
+        JOptionPane.showMessageDialog(null, "Welcome to my coin flipping game \nYou have 5 guesses \nif you guess right you get a point!\nif you guess wrong you lose a point");
 
-        while (quess < 5) {
+        while (guess < 5) {
 
             int response = JOptionPane.showOptionDialog(null,
                     "Do you want to throw?"
@@ -30,9 +30,9 @@ public class CoinFlip {
                     null, null, null);
             //if the player decides to throw 
             if (response == JOptionPane.YES_OPTION) {
-                quess += 1;
+                guess += 1;
 
-                quessIndex = Double.parseDouble(JOptionPane.showInputDialog(null, "Make your quess \ntype 1 if you want to quess tails \ntype 2 if you want to quess heads"));
+                guessIndex = Double.parseDouble(JOptionPane.showInputDialog(null, "Make your guess \ntype 1 if you want to guess tails \ntype 2 if you want to guess heads"));
 
                 //generate number between 1 and 2
                 int coinresult = (int) (Math.random() * 2 + 1);
@@ -40,23 +40,23 @@ public class CoinFlip {
                 if (coinresult == 1) {
                     JOptionPane.showMessageDialog(null, "You threw tails");
 
-                    if (quessIndex == 1) {
+                    if (guessIndex == 1) {
                         playerpoints += 1;
-                        JOptionPane.showMessageDialog(null, "You quessed right! \nYou now have" + playerpoints + " points");
+                        JOptionPane.showMessageDialog(null, "You guessed right! \nYou now have" + playerpoints + " points");
                     } else {
                         playerpoints -= 1;
-                        JOptionPane.showMessageDialog(null, "You quessed wrong! \nYou now have" + playerpoints + " points");
+                        JOptionPane.showMessageDialog(null, "You guessed wrong! \nYou now have" + playerpoints + " points");
                     }
                 }
                 if (coinresult == 2) {
                     JOptionPane.showMessageDialog(null, "You threw heads");
 
-                    if (quessIndex == 1) {
+                    if (guessIndex == 1) {
                         playerpoints -= 1;
-                        JOptionPane.showMessageDialog(null, "You quessed wrong! \nYou now have" + playerpoints + " points");
+                        JOptionPane.showMessageDialog(null, "You guessed wrong! \nYou now have" + playerpoints + " points");
                     } else {
                         playerpoints += 1;
-                        JOptionPane.showMessageDialog(null, "You quessed right! \nYou now have" + playerpoints + " points");
+                        JOptionPane.showMessageDialog(null, "You guessed right! \nYou now have" + playerpoints + " points");
                     }
 
                 }
@@ -68,7 +68,7 @@ public class CoinFlip {
             }
 
         }
-        JOptionPane.showMessageDialog(null, "You got" + playerpoints + " points");
+        JOptionPane.showMessageDialog(null, "You got " + playerpoints + " points");
     }
 
 }

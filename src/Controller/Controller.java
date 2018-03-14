@@ -15,7 +15,7 @@ public class Controller {
 
     public static void main(String[] args) {
         int ans;
-        String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading", "Roulette", "Rock, Paper, Scissors"};
+        String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading", "Roulette", "Rock, Paper, Scissors", "Coin Flips"};
         
         ans = JOptionPane.showOptionDialog(null, 
                 "Choose your game of choice:",
@@ -34,6 +34,8 @@ public class Controller {
             case 3: Roulette.Roulette.main(args);
                     break;
             case 4: RockPaperScissorsGame.main(args);
+                    break;
+            case 5: CoinFlip.CoinFlip.main(args);
                     break;
         }
         
