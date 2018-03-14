@@ -27,8 +27,9 @@ public class Roulette {
         while (chips > 0) {
             double bet = Double.parseDouble(JOptionPane.showInputDialog(null, "How much would you like to bet"));
 
-            if (chips < bet) {
+            while (chips < bet) {
                 JOptionPane.showMessageDialog(null, "You can't bet more than you have!");
+                bet = Double.parseDouble(JOptionPane.showInputDialog(null, "Please bet again!"));
             }
 
             JOptionPane.showMessageDialog(null, "You bet " + bet);
