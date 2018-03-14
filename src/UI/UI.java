@@ -11,13 +11,12 @@ import javax.swing.*;
  */
 public class UI {
     public static void main(String[] args) {
-        boolean game = true;
+        int game = 0;
         
         //TODO set that confirm dialog to change the boolean to false.
-        if (game = true) {
+        while (game == JOptionPane.YES_OPTION) {
                 Controller.Controller.main(args);
-                JOptionPane.showConfirmDialog(null, "Do you want to play again?");
-                
+                game = JOptionPane.showConfirmDialog(null, "Do you want to play again?");
         }
     }
 }
