@@ -11,7 +11,7 @@ package Blackjack;
  */
 //suit class
 public enum Suit {
-    
-   SPADE, DIAMOND, CLUB, HEART
-    
+
+    SPADE, DIAMOND, CLUB, HEART
+
 }
