@@ -4,6 +4,7 @@
  * and open the template in the editor. 
  */ 
 package Controller;
+import RoPaSc.RockPaperScissorsGame;
 import java.util.*;
 import javax.swing.*;
 /**
@@ -14,7 +15,7 @@ public class Controller {
 
     public static void main(String[] args) {
         int ans;
-        String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading", "Roulette"};
+        String[] options = new String[] {"Blackjack", "Russian Roulette", "Tarot Reading", "Roulette", "Rock, Paper, Scissors"};
         
         ans = JOptionPane.showOptionDialog(null, 
                 "Choose your game of choice:",
@@ -31,7 +32,9 @@ public class Controller {
             case 2: Tarot.TarotDeck.main(args);
                     break;
             case 3: Roulette.Roulette.main(args);
-            default: System.out.println("Pick a valid option");
+                    break;
+            case 4: RockPaperScissorsGame.main(args);
+                    break;
         }
         
     }
