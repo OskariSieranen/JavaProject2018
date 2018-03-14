@@ -5,25 +5,28 @@
  */
 package RussianRoulette;
 
+import Blackjack.Value;
+import Blackjack.Suit;
+import Blackjack.Card;
 import java.util.*;
 
 /**
  *
- * @author Pate
+ * @author joona
  *
  */
 public class CardDeck {
 
-    //ilmentymämuuttuja
+    //ArrayList
     private ArrayList<Card> cards;
 
-    //konstruktori
+    //Constructor
     public CardDeck() {
         this.cards = new ArrayList<Card>();
     }
 
     public void createFullDeck() {
-        //Here i create the cards using a For-each loop
+        //Creates the cards using a For-each loop
         for (Suit cardSuit : Suit.values()) {
             for (Value cardValue : Value.values()) {
                 //Adding new card to a deck
@@ -33,20 +36,21 @@ public class CardDeck {
 
     }
 
+    //Creates the shuffle mechanism
     public void shuffle() {
-        //here i create a new empty deck
+        //Creates a new empty deck
         ArrayList<Card> tmpDeck = new ArrayList<Card>();
-        //Here i use the Random object 
+        //Uses the Random object 
         Random random = new Random();
-        // a card that i pull out of the deck
+        //A card that i pull out of the deck
         int randomCardIndex = 0;
         int originalSize = this.cards.size();
         for (int i = 0; i < originalSize; i++) {
-            //Generating Random index
+            //Generates Random index
             randomCardIndex = random.nextInt((this.cards.size() - 1 - 0) + 1) + 0;
-            //adding the random card to the temporary deck
+            //Adds the random card to the temporary deck
             tmpDeck.add(this.cards.get(randomCardIndex));
-            //removing the random card from the original deck so that the shuffle will keep working nornally
+            //Removes the random card from the original deck so that the shuffle will keep working nornally
             this.cards.remove(randomCardIndex);
         }
 
@@ -76,7 +80,7 @@ public class CardDeck {
 
     }
 
-    //drawing from the deck
+    //Drawing from the deck
     //in the CardDeck drawing from we will refer to the deck we want to draw from
     //by inserting its name to playerDeck.draw(playingDeck); playingDeck slot
     //this.cards.add means the deck we are adding them to basicly it makes a copy of the card
@@ -88,28 +92,27 @@ public class CardDeck {
 
     }
     
-    // dealerDeck.moveALLcardsToDeck(playingDeck);
-    public void moveALLcardsToDeck(CardDeck moveTo){
-        int thisDeckSize = this.cards.size();
-        
-        //put cards into moveTo deck
-        for(int i = 0; i < thisDeckSize; i ++){
-            moveTo.addCard(this.getCard(i));
-            
-        }
-        //removing cards from hand
-        for (int i = 0; i < thisDeckSize; i++){
-            this.removeCard(0);
-        }
-    }
-
-    //shows how many cards there is in a hand
+    //Shows how many cards there is in a hand
     public int deckSize() {
         return this.cards.size();
     }
+    
+    //Moves all the card from a deck to another
+    public void moveALLcardsToDeck(CardDeck moveTo) {
+        int thisDeckSize = this.cards.size();
 
-    //defining the values of the cards
-    //also defining when ace is one or eleven
+        //put cards into moveTo deck
+        for (int i = 0; i < thisDeckSize; i++) {
+            moveTo.addCard(this.getCard(i));
+
+        }
+        //removing cards from hand
+        for (int i = 0; i < thisDeckSize; i++) {
+            this.removeCard(0);
+        }
+    }
+    
+    //Defines the values of the cards exept the Aces which are defined in the game
     public int cardsValue() {
         int totalValue = 0;
 
