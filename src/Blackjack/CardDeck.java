@@ -39,7 +39,7 @@ public class CardDeck {
         //Here i use the Random object 
         Random random = new Random();
         // a card that i pull out of the deck
-        int randomCardIndex = 0;
+        int randomCardIndex;
         int originalSize = this.cards.size();
         for (int i = 0; i < originalSize; i++) {
             //Generating Random index
@@ -67,6 +67,7 @@ public class CardDeck {
         this.cards.add(addCard);
     }
 
+    @Override
     public String toString() {
         String cardListOutput = "";
         for (Card aCard : this.cards) {
@@ -81,7 +82,7 @@ public class CardDeck {
     //by inserting its name to playerDeck.draw(playingDeck); playingDeck slot
     //this.cards.add means the deck we are adding them to basicly it makes a copy of the card
     //so in the last line we refer to the playingDeck again with the drawingFrom and then
-    //we remove the card from the top of the imaginary deck so the first cell of the list
+    //we remove a card from it becouse well thats what drawing is
     public void draw(CardDeck drawingFrom) {
         this.cards.add(drawingFrom.getCard(0));
         drawingFrom.removeCard(0);
@@ -158,6 +159,7 @@ public class CardDeck {
             }
         }
         //this is where we define when ace is one or eleven
+        
         for (int i = 0; i < aces; i++) {
 
             if (totalValue > 10) {
