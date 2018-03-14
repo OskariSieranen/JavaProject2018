@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package RussianRoulette;
 
 import javax.swing.JOptionPane;
 
 /**
- *
+ *This is a game mode called V (Russian Roulette) and it is played against the computer.
+ * The idea is to take turns drawing playing cards from a deck of 52 cards one at a time.
+ * The value of the first card drawn in a turn, determines how many other cards must be drawn.
+ * The one who draws the Ace of Spades first loses.
  * @author joona
  */
 public class Survival {
@@ -105,6 +104,7 @@ public class Survival {
             if (repeat == false) {
                 if (roundcount > record){
                     record = roundcount;
+                    roundcount = 0;
                 }
                 int choice3 = JOptionPane.showOptionDialog(null,
                         "Your record: " + record + " rounds"
