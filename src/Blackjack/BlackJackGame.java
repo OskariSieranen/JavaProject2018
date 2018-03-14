@@ -38,9 +38,9 @@ public class BlackJackGame {
             //Game starts
             //ill ask how much does the player want to bet
             double bet = Double.parseDouble(JOptionPane.showInputDialog(null, "You have $ " + chips + " in chips, how much do you want to bet"));
-            if (bet > chips) {
-                JOptionPane.showMessageDialog(null, "You cannot bet more than you have! ");
-                break;
+            while (bet > chips) {
+                JOptionPane.showMessageDialog(null, "You cannot bet more than you have! \n Bet again ");
+                bet = Double.parseDouble(JOptionPane.showInputDialog(null, "You have $ " + chips + " in chips, how much do you want to bet"));
             }
 
             boolean endRound = false;
